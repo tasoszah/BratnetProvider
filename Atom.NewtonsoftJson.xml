@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Atom.NewtonsoftJson</name>
+    </assembly>
+    <members>
+        <member name="T:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.String"/> to a <see cref="T:System.Boolean"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Boolean,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter.GetTrueString">
+            <summary>
+            Gets the string representation for the <see cref="!:true"/> value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseBoolToStringJsonConverter.GetFalseString">
+            <summary>
+            Gets the string representation for the <see cref="!:false"/> value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that is used for converting between a value that supports string based formatting
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.GetFormat">
+            <summary>
+            Gets the format that is used for serializing and deserializing the value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.ShouldSerializeToEmptyStringWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            an empty string should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.FormatProvider.Format">
+            <summary>
+            The format
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.FormatProvider.#ctor(System.String)">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseFormattableValueToStringJsonConverter`1.FormatProvider.GetFormat(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConvert"/> that sets a boolean property based on its existence on the Json string
+            </summary>
+        </member>
+        <member name="F:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.mInstance">
+            <summary>
+            The member of the <see cref="P:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.Instance"/>
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.Instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.CanConvert(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BoolToExistingObjectJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DateOnlyToJsonObjectJsonConverter">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> used for converting a <see cref="!:DateOnly?"/> to a JSON object
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToJsonObjectJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToJsonObjectJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{System.DateOnly},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToJsonObjectJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{System.DateOnly},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> used for converting a <typeparamref name="TValue"/> to a <see cref="T:System.String"/>
+            </summary>
+            <typeparam name="TValue">The type of the value</typeparam>
+        </member>
+        <member name="F:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.SerializationFormat">
+            <summary>
+            The format that is used for serializing and deserializing the date
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.Convert(System.String)">
+            <summary>
+            Converts the <paramref name="value"/> to the respective <typeparamref name="TValue"/>
+            </summary>
+            <param name="value">The string value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1.Convert(`0)">
+            <summary>
+            Writes the JSON representation of the <paramref name="value"/>
+            </summary>
+            <param name="value">The <typeparamref name="TValue"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DateOnlyToStringJsonConverter">
+            <summary>
+            A <see cref="T:Atom.NewtonsoftJson.BaseDateOnlyToStringJsonConverter`1"/> used for converting a <see cref="T:System.DateOnly"/> to a <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateOnlyToStringJsonConverter.Convert(System.DateOnly)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1">
+            <summary>
+            The base string to DateTime Json converter
+            </summary>
+            <typeparam name="TValue">The type</typeparam>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.DateTimeStyles">
+            <summary>
+            The date time styles
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.FormatProvider">
+            <summary>
+            The format provider
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.Formats">
+            <summary>
+            The <see cref="!:DateTimeOffset?"/> formats
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.SerializationFormat">
+            <summary>
+            The format that will be used during the serialization
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.#ctor(System.String)">
+            <summary>
+            Serialization format based constructor
+            </summary>
+            <param name="serializationFormat">The format that will be used during the serialization</param>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.Convert(System.String)">
+            <summary>
+            Converts the <paramref name="value"/> to the respective <typeparamref name="TValue"/>
+            </summary>
+            <param name="value">The string value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseDateTimeToStringJsonConverter`1.Convert(`0)">
+            <summary>
+            Writes the JSON representation of the <paramref name="value"/>
+            </summary>
+            <param name="value">The <typeparamref name="TValue"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DateTimeOffsetToStringJsonConverter">
+            <summary>
+            The Json converter from <see cref="T:System.String"/> to <see cref="T:System.DateTimeOffset"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeOffsetToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeOffsetToStringJsonConverter.#ctor(System.String)">
+            <summary>
+            Serialization format based constructor
+            </summary>
+            <param name="serializationFormat">The format that will be used during the serialization</param>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeOffsetToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeOffsetToStringJsonConverter.Convert(System.DateTimeOffset)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DateTimeToStringJsonConverter">
+            <summary>
+            The Json converter from <see cref="T:System.String"/> to <see cref="T:System.DateTime"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeToStringJsonConverter.#ctor(System.String)">
+            <summary>
+            Serialization format based constructor
+            </summary>
+            <param name="serializationFormat">The format that will be used during the serialization</param>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DateTimeToStringJsonConverter.Convert(System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumEnumerableJsonConverter`1">
+            <summary>
+            The base for all the converters that are used for converting a <see cref="T:System.Collections.Generic.IEnumerable`1"/> to <see cref="T:System.String"/>.
+            Ex.: Json: [first, second, third]
+                 Result: IEnumrable{TEnum}
+            </summary>
+            <typeparam name="TEnum">The type of the enum</typeparam>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Collections.Generic.IEnumerable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Collections.Generic.IEnumerable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableJsonConverter`1.GetMapper">
+            <summary>
+            Gets the mapper
+            </summary>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumEnumerableToCommaSeparatedStringJsonConverter`1">
+            <summary>
+            The base for all the converters that are used for converting a comma separated <see cref="T:System.String"/> of enumerable values to <see cref="T:System.String"/>.
+            Ex.: Json: "first, second, third"
+                 Result: IEnumrable{TEnum}
+            </summary>
+            <typeparam name="TEnum">The type of the enum</typeparam>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableToCommaSeparatedStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableToCommaSeparatedStringJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Collections.Generic.IEnumerable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumEnumerableToCommaSeparatedStringJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Collections.Generic.IEnumerable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumJsonConverter`2">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that is used for converting a <typeparamref name="TEnum"/> to a <typeparamref name="TValue"/> using
+            a predefined mapping between the values.
+            </summary>
+            <typeparam name="TEnum">The type of the enum</typeparam>
+            <typeparam name="TValue">The type of the value</typeparam>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.Equals(`1,`1)">
+            <summary>
+            Returns a flag indicating whether the <paramref name="first"/> is
+            equal to the <paramref name="second"/>
+            </summary>
+            <param name="first">The first value</param>
+            <param name="second">The second value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.GetMapper">
+            <summary>
+            Gets the mapper
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.Convert(System.String)">
+            <summary>
+            Converts a value of <see cref="T:System.String"/> to <typeparamref name="TValue"/>
+            </summary>
+            <param name="value">The value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.ShouldSerializeToEmptyStringWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            an empty string should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumJsonConverter`2.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumToFloatJsonConverter`1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToFloatJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToFloatJsonConverter`1.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumToIntJsonConverter`1">
+            <summary>
+            The base <see cref="T:Newtonsoft.Json.JsonConverter`1"/> for converting a <typeparamref name="TEnum"/> to <see cref="T:System.Int32"/>
+            </summary>
+            <typeparam name="TEnum">The type of the enum</typeparam>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToIntJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToIntJsonConverter`1.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseEnumToStringJsonConverter`1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToStringJsonConverter`1.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToStringJsonConverter`1.Equals(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseEnumToStringJsonConverter`1.ShouldPreformCaseInsensitiveComparison">
+            <summary>
+            Returns a flag indicating whether a case insensitive comparison should
+            be executed when searching for an enum value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.CountryCodeToStringJsonConverter">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.CountryCodeToStringJsonConverter.CountryCodeToStringMapper">
+            <summary>
+            Maps the <see cref="T:Atom.CountryCode"/>s to their related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.CountryCodeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.CountryCodeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.LanguageCodeToStringJsonConverter">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter"/> that sets a <see cref="T:Atom.LanguageCode"/> property based on its existence on the Json string
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.LanguageCodeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.LanguageCodeToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,Atom.LanguageCode,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.LanguageCodeToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,Atom.LanguageCode,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.ByteToStringJsonConverter">
+            <summary>
+            The string to byte Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ByteToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ByteToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DecimalToStringJsonConverter">
+            <summary>
+            The string to decimal Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DecimalToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DecimalToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.DoubleToStringJsonConverter">
+            <summary>
+            The string to double Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DoubleToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.DoubleToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.FloatToStringJsonConverter">
+            <summary>
+            The string to float Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.FloatToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.FloatToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.IntToStringJsonConverter">
+            <summary>
+            The string to int Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.IntToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.IntToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.LongToStringJsonConverter">
+            <summary>
+            The string to long Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.LongToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.LongToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.NumberToStringJsonConverter`2">
+            <summary>
+            The string to numeric Json converter
+            </summary>
+            <typeparam name="TStringToNumberJsonConverter">The string to number Json converter for <typeparamref name="TValue"/></typeparam>
+            <typeparam name="TValue">The type of the numeric value</typeparam>
+        </member>
+        <member name="F:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.mInstance">
+            <summary>
+            The member of the <see cref="P:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.Instance"/> property
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.Instance">
+            <summary>
+            A single instance of the of the <typeparamref name="TStringToNumberJsonConverter"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`1},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`1},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NumberToStringJsonConverter`2.Convert(System.String)">
+            <summary>
+            Converts the <paramref name="value"/> to the respective <typeparamref name="TValue"/>
+            </summary>
+            <param name="value">The string value</param>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.SByteToStringJsonConverter">
+            <summary>
+            The string to signed byte Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.SByteToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.SByteToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.ShortToStringJsonConverter">
+            <summary>
+            The string to short Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ShortToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ShortToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.UIntToStringJsonConverter">
+            <summary>
+            The string to unsigned int Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.UIntToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.UIntToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.ULongToStringJsonConverter">
+            <summary>
+            The string to unsigned long Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ULongToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.ULongToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.UShortToStringJsonConverter">
+            <summary>
+            The string to unsigned short Json converter
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.UShortToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.UShortToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.StringToObjectJsonConverter">
+            <summary>
+            The object to string converter
+            </summary>
+        </member>
+        <member name="F:Atom.NewtonsoftJson.StringToObjectJsonConverter.mInstance">
+            <summary>
+            The member of the <see cref="P:Atom.NewtonsoftJson.StringToObjectJsonConverter.Instance"/>
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.StringToObjectJsonConverter.Instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.StringToObjectJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.StringToObjectJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.String,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.StringToObjectJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.String,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.TimeOnlyToJsonObjectJsonConverter">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> used for converting a <see cref="!:Time?"/> to a JSON object
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToJsonObjectJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToJsonObjectJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{System.TimeOnly},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToJsonObjectJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{System.TimeOnly},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1">
+            <summary>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> used for converting a <typeparamref name="TValue"/> to a <see cref="T:System.String"/>
+            </summary>
+            <typeparam name="TValue">The type of the value</typeparam>
+        </member>
+        <member name="F:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.SerializationFormat">
+            <summary>
+            The format that is used for serializing and deserializing the Time
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Nullable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Nullable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.ShouldSerializeToNullWhenTheValueIsNull">
+            <summary>
+            Returns a flag indicating whether when there isn't a value,
+            a null value should be added to the Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.Convert(System.String)">
+            <summary>
+            Converts the <paramref name="value"/> to the respective <typeparamref name="TValue"/>
+            </summary>
+            <param name="value">The string value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1.Convert(`0)">
+            <summary>
+            Writes the JSON representation of the <paramref name="value"/>
+            </summary>
+            <param name="value">The <typeparamref name="TValue"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.TimeOnlyToStringJsonConverter">
+            <summary>
+            A <see cref="T:Atom.NewtonsoftJson.BaseTimeOnlyToStringJsonConverter`1"/> used for converting a <see cref="T:System.TimeOnly"/> to a <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToStringJsonConverter.Convert(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.TimeOnlyToStringJsonConverter.Convert(System.TimeOnly)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atom.NewtonsoftJson.NewtonsoftHelpers">
+            <summary>
+            Helper methods related to Newtonsoft
+            </summary>
+        </member>
+        <member name="P:Atom.NewtonsoftJson.NewtonsoftHelpers.Settings">
+            <summary>
+            A single instance of the <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>
+            </summary>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NewtonsoftHelpers.ConfigureSerializer(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Configures the specified <paramref name="settings"/>
+            </summary>
+            <param name="settings">The settings</param>
+        </member>
+        <member name="M:Atom.NewtonsoftJson.NewtonsoftHelpers.CreateSerializerSettings">
+            <summary>
+            Creates and returns a pre-configured <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/>
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
