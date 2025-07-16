@@ -59,7 +59,7 @@ namespace BratnetProvider
         /// The vat amount
         /// </summary>
         [JsonProperty("vatAmount")]
-        public decimal? VatAmount { get; set; }
+        public decimal? VATAmount { get; set; }
 
         /// <summary>
         /// The vat category
@@ -91,7 +91,7 @@ namespace BratnetProvider
         /// The VAT percentage
         /// </summary>
         [JsonProperty("vatPercent")]
-        public int? VatPercent { get; set; }
+        public int? VATPercent { get; set; }
 
         /// <summary>
         /// Needs to be CHECKED
@@ -143,21 +143,21 @@ namespace BratnetProvider
         /// The UBL VAT category
         /// </summary>
         [JsonProperty("ublVatCategory")]
-        /// Missing converter
-        public PEPPOLDutyOrTaxOrFeeCategoryCode? UblVatCategory { get; set; }
+        [JsonConverter(typeof(PEPPOLDutyOrTaxOrFeeCategoryCodeToStringJsonConverter))]
+        public PEPPOLDutyOrTaxOrFeeCategoryCode? PEPPOLVATCategory { get; set; }
 
         /// <summary>
         /// The UBL measurement unit
         /// </summary>
         [JsonProperty("ublMeasurementUnit")]
-        /// Missing converter
-        public PEPPOLRecommendationCode? UblMeasurementUnit { get; set; }
+        [JsonConverter(typeof(PEPPOLRecommendationCodeToStringJsonConverter))]
+        public PEPPOLRecommendationCode? PEPPOLMeasurementUnit { get; set; }
 
         /// <summary>
         /// The UBL CPV code
         /// </summary>
         [JsonProperty("ublCpvCode")]
-        public string? UblCpvCode { get; set; }
+        public string? PEPPOLCpvCode { get; set; }
 
         #endregion
 

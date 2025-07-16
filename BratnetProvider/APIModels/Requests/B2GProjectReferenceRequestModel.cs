@@ -1,4 +1,5 @@
 ﻿using Atom.Web;
+using Newtonsoft.Json;
 
 namespace BratnetProvider
 {
@@ -12,13 +13,15 @@ namespace BratnetProvider
         /// <summary>
         /// Type code of the project 
         /// </summary>
-        /// <example>3 for EU-funded</example>
-        public string? Type { get; set; }
+        [JsonProperty("type")]
+        [JsonConverter(typeof(BudgetTypeToIntJsonConverter))]
+        public BudgetType? Type { get; set; }
 
         /// <summary>
         /// ID of the project or funding reference
         /// </summary>
         /// <example>6ΗΓ5Ω6Μ-Λ14</example>
+        [JsonProperty("id")]
         public string? Id { get; set; }
 
         #endregion

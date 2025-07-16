@@ -5,34 +5,34 @@ namespace BratnetProvider
     /// <summary>
     /// Represents a request model for invoice VAT analysis.
     /// </summary>
-    public class InvoiceVatAnalysisRequestModel
+    public class InvoiceVATAnalysisRequestModel
     {
         #region Public Properties
 
         /// <summary>
-        /// The Vat category
+        /// The VAT category
         /// </summary>
         [JsonProperty("vatCategory")]
         [JsonConverter(typeof(VATCategoryToIntJsonConverter))]
-        public VATCategory? VatCategory { get; set; }
+        public VATCategory? VATCategory { get; set; }
 
         /// <summary>
         /// The VAT percentage
         /// </summary>
         [JsonProperty("vatPercent")]
-        public int? VatPercentage { get; set; }
+        public int? VATPercentage { get; set; }
 
         /// <summary>
         /// The net value per VAT category
         /// </summary>
         [JsonProperty("netValuePerVat")]
-        public decimal? NetValuePerVat { get; set; }
+        public decimal? NetValuePerVAT { get; set; }
 
         /// <summary>
         /// The VAT amount per VAT category
         /// </summary>
         [JsonProperty("vatAmount")]
-        public decimal? VatAmount { get; set; }
+        public decimal? VATAmount { get; set; }
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace BratnetProvider
         /// <summary>
         /// Default constructor
         /// </summary>
-        public InvoiceVatAnalysisRequestModel() : base()
+        public InvoiceVATAnalysisRequestModel() : base()
         {
 
         }

@@ -6,7 +6,7 @@ namespace BratnetProvider
     /// <summary>
     /// Represents a request model for UBL issuer/counterpart information.
     /// </summary>
-    public class UblUserInfoRequestModel : BaseRequestModel
+    public class PEPPOLUserInfoRequestModel : BaseRequestModel
     {
         #region Public Properties
 
@@ -29,7 +29,7 @@ namespace BratnetProvider
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UblUserInfoRequestModel() : base()
+        public PEPPOLUserInfoRequestModel() : base()
         {
 
         }

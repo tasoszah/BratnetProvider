@@ -116,7 +116,7 @@ namespace BratnetProvider
         /// The VAT (identification number) of the seller's representative
         /// </summary>
         [JsonProperty("salerRepresentativeVat")]
-        public string? SalerRepresentativeVat { get; set; }
+        public string? SalerRepresentativeVAT { get; set; }
 
         /// <summary>
         /// The counterpart's company name

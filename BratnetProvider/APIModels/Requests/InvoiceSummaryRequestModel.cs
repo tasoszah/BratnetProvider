@@ -20,7 +20,7 @@ namespace BratnetProvider
         /// The total vat amount
         /// </summary>
         [JsonProperty("totalVatAmount")]
-        public decimal? TotalVatAmount { get; set; }
+        public decimal? TotalVATAmount { get; set; }
 
         /// <summary>
         /// The total amount of any withheld taxes or amounts that have been deducted from the invoice value

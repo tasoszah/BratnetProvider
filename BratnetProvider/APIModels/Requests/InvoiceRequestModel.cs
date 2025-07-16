@@ -71,7 +71,7 @@ namespace BratnetProvider
         /// The invoice VAT analysis
         /// </summary>
         [JsonProperty("invoiceVatAnalysis")]
-        public InvoiceVatAnalysisRequestModel? InvoiceVatAnalysis { get; set; }
+        public InvoiceVATAnalysisRequestModel? InvoiceVatAnalysis { get; set; }
 
         /// <summary>
         /// Contains additional optional fields that provide supplementary information not directly related 
@@ -84,7 +84,7 @@ namespace BratnetProvider
         /// The UBL fields section provides UBL-compliant addressing and entity identification for public sector invoices
         /// </summary>
         [JsonProperty("ublFields")]
-        public UblFieldsRequestModel? UblFields { get; set; }
+        public PEPPOLFieldsRequestModel? PEPPOLFields { get; set; }
 
         /// <summary>
         /// Includes essential metadata for government invoicing such as project references and contract details

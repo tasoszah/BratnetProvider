@@ -29,17 +29,17 @@ namespace BratnetProvider
         public decimal? taxAmount { get; set; }
 
         /// <summary>
-        /// The vat amount of the tax
+        /// The VAT amount of the tax
         /// </summary>
         [JsonProperty("taxVatAmount")]
-        public decimal? TaxVatAmount { get; set; }
+        public decimal? TaxVATAmount { get; set; }
 
         /// <summary>
-        /// The vat category of the tax 
+        /// The VAT category of the tax 
         /// </summary>
         [JsonProperty("vatCategory")]
         [JsonConverter(typeof(VATCategoryToIntJsonConverter))]
-        public VATCategory? VatCategory { get; set; }
+        public VATCategory? VATCategory { get; set; }
 
         /// <summary>
         /// The tax type
@@ -52,7 +52,7 @@ namespace BratnetProvider
         /// The tax VAT percentage
         /// </summary>
         [JsonProperty("taxVatPercent")]
-        public int? TaxVatPercentage { get; set; }
+        public int? TaxVATPercentage { get; set; }
 
         /// <summary>
         /// The tax category id

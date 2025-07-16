@@ -6,7 +6,7 @@ namespace BratnetProvider
     /// <summary>
     /// Represents a request model for UBL fields.
     /// </summary>
-    public class UblFieldsRequestModel: BaseRequestModel
+    public class PEPPOLFieldsRequestModel: BaseRequestModel
     {
         #region Public Properties
 
@@ -14,26 +14,26 @@ namespace BratnetProvider
         /// The UBL invoice type
         /// </summary>
         [JsonProperty("invoiceTypeCode")]
-        ///Missing converter
-        public PEPPOLInvoiceTypeCode? UblInvoiceTypeCode { get; set; }
+        [JsonConverter(typeof(PEPPOLInvoiceTypeCodeToStringJsonConverter))]
+        public PEPPOLInvoiceTypeCode? PEPPOLInvoiceTypeCode { get; set; }
 
         /// <summary>
         /// The issuer's information
         /// </summary>
         [JsonProperty("issuerInfo")]
-        public UblUserInfoRequestModel? IssuerInfo { get; set; }
+        public PEPPOLUserInfoRequestModel? IssuerInfo { get; set; }
 
         /// <summary>
         /// The counterpart's information
         /// </summary>
         [JsonProperty("counterInfo")]
-        public UblUserInfoRequestModel? CounterpartInfo { get; set; }
+        public PEPPOLUserInfoRequestModel? CounterpartInfo { get; set; }
 
         /// <summary>
         /// The delivery request information
         /// </summary>
         [JsonProperty("delivery")]
-        public UblDeliveryRequestModel? Delivery { get; set; }
+        public PEPPOLDeliveryRequestModel? Delivery { get; set; }
 
         #endregion
 
@@ -42,7 +42,7 @@ namespace BratnetProvider
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UblFieldsRequestModel() : base()
+        public PEPPOLFieldsRequestModel() : base()
         {
 
         }

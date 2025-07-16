@@ -27,6 +27,7 @@ namespace BratnetProvider
         /// The issue date
         /// </summary>
         [JsonProperty("issueDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? IssueDate { get; set; }
 
         /// <summary>
@@ -46,6 +47,7 @@ namespace BratnetProvider
         /// The currency code
         /// </summary>
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? Currency { get; set; }
 
         /// <summary>
@@ -59,12 +61,13 @@ namespace BratnetProvider
         /// A flag indicating if the invoice has vat payment suspension
         /// </summary>
         [JsonProperty("vatPaymentSuspension")]
-        public bool? VatPaymentSuspension { get; set; }
+        public bool? VATPaymentSuspension { get; set; }
 
         /// <summary>
         /// The dispatch date
         /// </summary>
         [JsonProperty("dispatchDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? DispatchDate { get; set; }
 
         /// <summary>
@@ -92,7 +95,7 @@ namespace BratnetProvider
         public string? TableAA { get; set; }
 
         /// <summary>
-        /// The Vat category
+        /// The VAT category
         /// </summary>
         [JsonProperty("specialInvoiceCategory")]
         [JsonConverter(typeof(VATCategoryToIntJsonConverter))]

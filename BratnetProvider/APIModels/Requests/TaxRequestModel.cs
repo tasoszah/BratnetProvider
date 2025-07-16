@@ -47,15 +47,15 @@ namespace BratnetProvider
         /// </summary>
         /// <example> 20 for 20%</example>
         [JsonProperty("ublMultiplierFactor")]
-        public decimal? ublMultiplierFactor { get; set; }
+        public decimal? PEPPOLMultiplierFactor { get; set; }
 
         /// <summary>
         /// Tax category code
         /// ONLY for B2G
         /// </summary>
         [JsonProperty("ublTaxCategory")]
-        ///Missing converter
-        public PEPPOLAllowanceReasonCode? UblTaxCategory { get; set; }
+        [JsonConverter(typeof(PEPPOLAllowanceReasonCodeToStringJsonConverter))]
+        public PEPPOLAllowanceReasonCode? PEPPOLTaxCategory { get; set; }
 
         #endregion
 

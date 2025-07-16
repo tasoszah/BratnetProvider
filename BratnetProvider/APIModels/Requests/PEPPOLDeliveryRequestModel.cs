@@ -5,7 +5,7 @@ namespace BratnetProvider
     /// <summary>
     /// Represents a request model for UBL delivery information.
     /// </summary>
-    public class UblDeliveryRequestModel
+    public class PEPPOLDeliveryRequestModel
     {
         #region Public Properties
 
@@ -22,7 +22,7 @@ namespace BratnetProvider
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UblDeliveryRequestModel() : base()
+        public PEPPOLDeliveryRequestModel() : base()
         {
 
         }

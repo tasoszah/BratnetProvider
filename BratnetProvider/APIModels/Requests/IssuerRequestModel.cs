@@ -14,12 +14,13 @@ namespace BratnetProvider
         /// The VAT Number
         /// </summary>
         [JsonProperty("vatNumber")]
-        public string? VatNumber { get; set; }
+        public string? VATNumber { get; set; }
 
         /// <summary>
         /// The country code
         /// </summary>
         [JsonProperty("country")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? Country { get; set; }
 
         /// <summary>
@@ -51,13 +52,6 @@ namespace BratnetProvider
         {
 
         }
-
-        #endregion
-
-        #region Public Methods
-
-        /// <inheritdoc/>
-        public override string ToString() => Name + " - " + VatNumber;
 
         #endregion
     }
