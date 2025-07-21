@@ -14,7 +14,7 @@ namespace BratnetProvider
         /// A flag that indicates if the document will be sended to counterpart via email
         /// </summary>
         [JsonProperty("customerSendEmail")]
-        public bool? CustomerSendEmail { get; set; }
+        public bool? SendCustomerEmail { get; set; }
 
         /// <summary>
         /// The issuer's company name
@@ -39,12 +39,6 @@ namespace BratnetProvider
         /// </summary>
         [JsonProperty("salerAdditionalStreetName")]
         public string? SellerAdditionalStreetName { get; set; }
-
-        /// <summary>
-        /// The issuer's district
-        /// </summary>
-        [JsonProperty("salerAdditionalStreetName")]
-        public string? SellerRegion { get; set; }
 
         /// <summary>
         /// The issuer's postal code

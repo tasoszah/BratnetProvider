@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Public Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<WithholdingTaxCategory, int> GetMapper() => BratnetProviderClientConstants.WithholdingTaxCategoryToIntMapper;
+        protected override IReadOnlyDictionary<WithholdingTaxCategory, int> GetMapper() => Constants.WithholdingTaxCategoryToIntMapper;
 
         #endregion
     }

@@ -27,7 +27,7 @@ namespace BratnetProvider
         /// auditing, and reconciliation in systems that handle invoicing or financial processes
         /// </summary>
         [JsonProperty("tidNsp")]
-        public string? TidNsp { get; set; }
+        public string? TIdNSP { get; set; }
 
         /// <summary>
         /// Details about the entity issuing the invoice, such as VAT number, branch, address, and supply account number
@@ -71,7 +71,7 @@ namespace BratnetProvider
         /// The invoice VAT analysis
         /// </summary>
         [JsonProperty("invoiceVatAnalysis")]
-        public InvoiceVATAnalysisRequestModel? InvoiceVatAnalysis { get; set; }
+        public IEnumerable<InvoiceVATAnalysisRequestModel>? InvoiceVatAnalysis { get; set; }
 
         /// <summary>
         /// Contains additional optional fields that provide supplementary information not directly related 
@@ -99,11 +99,10 @@ namespace BratnetProvider
         public TaxesRequestModel? Taxes { get; set; }
 
         /// <summary>
-        /// The taxes descriptions
+        /// The tax descriptions
         /// </summary>
         [JsonProperty("taxesDescriptions")]
-        public IEnumerable<TaxesDescriptionsRequestModel>? TaxesDescriptions { get; set; }
-
+        public IEnumerable<TaxDescriptionsRequestModel>? TaxDescriptions { get; set; }
 
         #endregion
 

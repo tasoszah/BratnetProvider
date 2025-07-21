@@ -20,7 +20,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<PEPPOLRecommendationCode, string> GetMapper() => BratnetProviderClientConstants.PEPPOLRecommendationCodeToStringMapper;
+        protected override IReadOnlyDictionary<PEPPOLRecommendationCode, string> GetMapper() => Constants.PEPPOLRecommendationCodeToStringMapper;
 
         #endregion
     }

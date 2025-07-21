@@ -20,7 +20,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<BudgetType, int> GetMapper() => BratnetProviderClientConstants.BudgetTypeToIntMapper;
+        protected override IReadOnlyDictionary<BudgetType, int> GetMapper() => Constants.BudgetTypeToIntMapper;
 
         #endregion
     }

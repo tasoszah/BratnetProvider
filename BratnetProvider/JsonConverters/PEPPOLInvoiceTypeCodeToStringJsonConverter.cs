@@ -20,7 +20,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<PEPPOLInvoiceTypeCode, string> GetMapper() => BratnetProviderClientConstants.PEPPOLInvoiceTypeCodeToStringMapper;
+        protected override IReadOnlyDictionary<PEPPOLInvoiceTypeCode, string> GetMapper() => Constants.PEPPOLInvoiceTypeCodeToStringMapper;
 
         #endregion
     }

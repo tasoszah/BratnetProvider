@@ -6,7 +6,7 @@ namespace BratnetProvider
     /// <summary>
     /// Represents a request model for tax descriptions.
     /// </summary>
-    public class TaxesDescriptionsRequestModel : BaseRequestModel
+    public class TaxDescriptionsRequestModel : BaseRequestModel
     {
         #region Public Properties
 
@@ -67,7 +67,7 @@ namespace BratnetProvider
         /// <summary>
         /// Default constructor
         /// </summary>
-        public TaxesDescriptionsRequestModel() : base()
+        public TaxDescriptionsRequestModel() : base()
         {
 
         }

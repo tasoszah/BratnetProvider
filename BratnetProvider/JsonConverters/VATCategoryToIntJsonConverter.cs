@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<VATCategory, int> GetMapper() => BratnetProviderClientConstants.VATCategoryToIntMapper;
+        protected override IReadOnlyDictionary<VATCategory, int> GetMapper() => Constants.VATCategoryToIntMapper;
 
         #endregion
     }

@@ -72,7 +72,7 @@ namespace BratnetProvider
         /// The expenses classification
         /// </summary>
         [JsonProperty("expensesClassification")]
-        public IEnumerable<ExpenseClassificationRequestModel>? ExpensesClassification { get; set; }
+        public IEnumerable<ExpenseClassificationRequestModel>? ExpenseClassifications { get; set; }
 
         /// <summary>
         /// The price
@@ -130,7 +130,7 @@ namespace BratnetProvider
         /// A flag indicating if the item has a discount 
         /// </summary>
         [JsonProperty("discountOption")]
-        public bool? DiscountOption { get; set; }
+        public bool? HasDiscountOption { get; set; }
 
         /// <summary>
         /// The VAT exemption category

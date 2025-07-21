@@ -4,9 +4,9 @@ using System.Collections.Immutable;
 namespace BratnetProvider
 {
     /// <summary>
-    /// Constants related to the bratnet provider client
+    /// Constants
     /// </summary>
-    public static class BratnetProviderClientConstants
+    public static class Constants
     {
         /// <summary>
         /// Maps the <see cref="CountryCode"/>s to their related <see cref="string"/>s

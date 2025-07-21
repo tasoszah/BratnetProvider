@@ -61,7 +61,7 @@ namespace BratnetProvider
         /// A flag indicating if the invoice has vat payment suspension
         /// </summary>
         [JsonProperty("vatPaymentSuspension")]
-        public bool? VATPaymentSuspension { get; set; }
+        public bool? HasVATPaymentSuspension { get; set; }
 
         /// <summary>
         /// The dispatch date

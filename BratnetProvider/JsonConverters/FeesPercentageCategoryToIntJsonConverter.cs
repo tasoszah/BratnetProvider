@@ -24,7 +24,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<FeePercentageCategory, int> GetMapper() => BratnetProviderClientConstants.FeesPercentageCategoryToIntMapper;
+        protected override IReadOnlyDictionary<FeePercentageCategory, int> GetMapper() => Constants.FeesPercentageCategoryToIntMapper;
 
         #endregion
     }

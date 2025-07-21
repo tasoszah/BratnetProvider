@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<MeasurementUnit, string> GetMapper() => BratnetProviderClientConstants.MeasurementUnitToStringMapper;
+        protected override IReadOnlyDictionary<MeasurementUnit, string> GetMapper() => Constants.MeasurementUnitToStringMapper;
 
         #endregion
     }

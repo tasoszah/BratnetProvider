@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace BratnetProvider
 {
     /// <summary>
-    /// Represents a request model for creating  signature for secure invoice submission.
+    /// Represents a request model for creating signature for secure invoice submission.
     /// </summary>
     public class CreateSimSignatureRequestModel : BaseRequestModel
     {

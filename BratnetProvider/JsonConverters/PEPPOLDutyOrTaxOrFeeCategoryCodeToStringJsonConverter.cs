@@ -20,7 +20,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<PEPPOLDutyOrTaxOrFeeCategoryCode, string> GetMapper() => BratnetProviderClientConstants.PEPPOLDutyOrTaxOrFeeCategoryCodeToStringMapper;
+        protected override IReadOnlyDictionary<PEPPOLDutyOrTaxOrFeeCategoryCode, string> GetMapper() => Constants.PEPPOLDutyOrTaxOrFeeCategoryCodeToStringMapper;
 
         #endregion
     }

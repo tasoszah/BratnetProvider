@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<InvoiceDetailType, int> GetMapper() => BratnetProviderClientConstants.InvoiceDetailTypeToIntMapper;
+        protected override IReadOnlyDictionary<InvoiceDetailType, int> GetMapper() => Constants.InvoiceDetailTypeToIntMapper;
 
         #endregion
     }

@@ -14,13 +14,13 @@ namespace BratnetProvider
         /// The type of expense classification
         /// </summary>
         [JsonProperty("classificationType")]
-        public ExpenseClassificationType? ExpenseClassificationType { get; set; }
+        public ExpenseClassificationType? Type { get; set; }
 
         /// <summary>
         /// The category of expense classification
         /// </summary>
         [JsonProperty("classificationCategory")]
-        public ExpenseClassificationCategory? ExpenseClassificationCategory { get; set; }
+        public ExpenseClassificationCategory? Category { get; set; }
 
         /// <summary>
         /// The amount 

@@ -23,7 +23,7 @@ namespace BratnetProvider.JsonConverters
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<StampDutyPercentageCategory, int> GetMapper() => BratnetProviderClientConstants.StampDutyPercentageCategoryToIntMapper;
+        protected override IReadOnlyDictionary<StampDutyPercentageCategory, int> GetMapper() => Constants.StampDutyPercentageCategoryToIntMapper;
 
         #endregion
     }

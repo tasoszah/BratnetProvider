@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<MovePurpose, int> GetMapper() => BratnetProviderClientConstants.MovePurposeToIntMapper;
+        protected override IReadOnlyDictionary<MovePurpose, int> GetMapper() => Constants.MovePurposeToIntMapper;
 
         #endregion
     }

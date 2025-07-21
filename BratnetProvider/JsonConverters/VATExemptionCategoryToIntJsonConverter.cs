@@ -23,7 +23,7 @@ namespace BratnetProvider.JsonConverters
         #region Public Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<VATExemptionCategory, int> GetMapper() => BratnetProviderClientConstants.VATExemptionCategoryToIntMapper;
+        protected override IReadOnlyDictionary<VATExemptionCategory, int> GetMapper() => Constants.VATExemptionCategoryToIntMapper;
 
         #endregion
     }

@@ -23,7 +23,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<FuelCodeCategory, int> GetMapper() => BratnetProviderClientConstants.FuelCodeCategoryTypeToIntMapper;
+        protected override IReadOnlyDictionary<FuelCodeCategory, int> GetMapper() => Constants.FuelCodeCategoryTypeToIntMapper;
 
         #endregion
     }

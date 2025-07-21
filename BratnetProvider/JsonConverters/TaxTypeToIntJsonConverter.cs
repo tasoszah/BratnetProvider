@@ -25,7 +25,7 @@ namespace BratnetProvider
         #region Public Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<TaxType, int> GetMapper() => BratnetProviderClientConstants.TaxTypeToIntMapper;
+        protected override IReadOnlyDictionary<TaxType, int> GetMapper() => Constants.TaxTypeToIntMapper;
 
         #endregion
     }

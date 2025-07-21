@@ -21,7 +21,7 @@ namespace BratnetProvider
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<CurrencyCode, string> GetMapper() => BratnetProviderClientConstants.CurrencyCodeToStringMapper;
+        protected override IReadOnlyDictionary<CurrencyCode, string> GetMapper() => Constants.CurrencyCodeToStringMapper;
 
         #endregion
     }
