@@ -19,6 +19,26 @@ namespace BratnetProvider
         public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToDictionary(x => x, x => x.ToString()).ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="IncomeClassificationCategory"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<IncomeClassificationCategory, string> IncomeClassificationCategoryToStringMapper { get; } = Enum.GetValues<IncomeClassificationCategory>().ToDictionary(x => x, x => x.ToString().ToLower()).ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="IncomeClassificationType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<IncomeClassificationType, string> IncomeClassificationTypeToStringMapper { get; } = Enum.GetValues<IncomeClassificationType>().ToDictionary(x => x, x => x.ToString()).ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="ExpenseClassificationCategory"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<ExpenseClassificationCategory, string> ExpenseClassificationCategoryToStringMapper { get; } = Enum.GetValues<ExpenseClassificationCategory>().ToDictionary(x => x, x => x.ToString().ToLower()).ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="ExpenseClassificationType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<ExpenseClassificationType, string> ExpenseClassificationTypeToStringMapper { get; } = Enum.GetValues<ExpenseClassificationType>().ToDictionary(x => x, x => x.ToString()).ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="BudgetType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<BudgetType, int> BudgetTypeToIntMapper { get; } = new Dictionary<BudgetType, int>()

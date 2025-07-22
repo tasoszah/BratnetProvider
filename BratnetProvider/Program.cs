@@ -1,21 +1,27 @@
 ﻿using Newtonsoft.Json;
+using System.Net;
 
 namespace BratnetProvider
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var c = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "credentials.txt")).Split(Environment.NewLine);
+            var credentials = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "credentials.txt"));
 
-            var credentials = new BratnetProviderCredentials(username: c[0], password: c[1]);
+            var array = credentials.Split(",");
+
+            var username = array[0];
+            var password = array[1];
+
+            var client = new BratnetProviderClient(new BratnetProviderCredentials(username, password), true);
 
             var json =
                 """
                                   {
                     "invoice": [
                       {
-                        "tidNsp": "99000007",
+                        "tidNsp": "evcs",
                 		"isUnsigned": false,
                 		"issuer": {
                           "vatNumber": "113223052",
@@ -32,10 +38,10 @@ namespace BratnetProvider
                           }
                         },
                         "invoiceHeader": {
-                          "series": "ΤΔΑ",
-                          "aa": "ΤΔΑ22",
-                          "issueDate": "28-08-2025",
-                          "invoiceType": "1.1",
+                          "series": "ΤΠΥ",
+                          "aa": "23",
+                          "issueDate": "21-07-2025",
+                          "invoiceType": "2.1",
                           "currency": "EUR" 
                         },
                         "paymentMethods": {
@@ -60,7 +66,7 @@ namespace BratnetProvider
                             "incomeClassification": [
                               {
                                 "classificationType": "E3_561_001",
-                                "classificationCategory": "category1_1",
+                                "classificationCategory": "category1_3",
                                 "amount": 100,
                                 "id": 1
                               }
@@ -83,7 +89,7 @@ namespace BratnetProvider
                             "incomeClassification": [
                               {
                                 "classificationType": "E3_561_001",
-                                "classificationCategory": "category1_1",
+                                "classificationCategory": "category1_3",
                                 "amount": 100.0,
                                 "id": 1
                               }
@@ -107,7 +113,7 @@ namespace BratnetProvider
                           "incomeClassification": [
                             {
                               "classificationType": "E3_561_001",
-                              "classificationCategory": "category1_1",
+                              "classificationCategory": "category1_3",
                               "amount": 200.0,
                               "id": 1
                             }
@@ -135,9 +141,9 @@ namespace BratnetProvider
                           "salerAdditionalStreetName": "ΕΥΠΑΛΙΟ",
                           "salerTk": "33056",
                           "salerCity": "ΕΥΠΑΛΙΟ",
-                          "salerPhone": "2610078000",
-                          "salerEmail": "info@dsdc.gr",
-                          "salerWebsite": "www.dsdc.gr",
+                          "salerPhone": "fot",
+                          "salerEmail": "kappa",
+                          "salerWebsite": "kappa",
                           "salerGemh": "000000000000",
                           "salerVat": "113223052",
                           "salerDoyCode": 4216,
@@ -150,14 +156,14 @@ namespace BratnetProvider
                           "customerStreetName": "ΠΑΝΕΠΙΣΤΗΜΙΟΥ 11",
                           "customerTk": "26441",
                           "customerCity": "ΠΑΤΡΑ",
-                          "customerPhone": "2610007800",
-                          "customerEmail": "support@dsdc.gr",
+                          "customerPhone": "test",
+                          "customerEmail": "support",
                           "shipmentName": "Οδικώς",
                           "loadingAddress": "Έδρα μας",
                           "destinationAddress": "Έδρα τους",
                           "paymentMethodName": "Cash",
                           "movePurpose": "Sale",
-                          "invoiceTypeName": "SalesInvoice",
+                          "invoiceTypeName": "ProvisionOfServicesInvoice",
                           "salerTitle": "DSDC"
                         }
                       }
@@ -166,10 +172,9 @@ namespace BratnetProvider
                 
                 """;
 
-            var model = JsonConvert.DeserializeObject<InvoicesRequestModel>(json);
+            var model = JsonConvert.DeserializeObject<InvoicesRequestModel>(json)!;
 
-
-
+            var response = await client.SendInvoicesAsync(model.Invoices ?? []);
 
 
             Console.WriteLine("Hello, World!");

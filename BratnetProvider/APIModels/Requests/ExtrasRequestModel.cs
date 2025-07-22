@@ -195,19 +195,19 @@ namespace BratnetProvider
         /// The payment method
         /// </summary>
         [JsonProperty("paymentMethodName")]
-        public PaymentType? PaymentMethodName { get; set; }
+        public string? PaymentMethodName { get; set; }
 
         /// <summary>
         /// The invoice type name
         /// </summary>
         [JsonProperty("invoiceTypeName")]
-        public InvoiceType? InvoiceTypeName { get; set; }
+        public string? InvoiceTypeName { get; set; }
 
         /// <summary>
         /// The move purpose
         /// </summary>
         [JsonProperty("movePurpose")]
-        public MovePurpose? MovePurpose { get; set; }
+        public string? MovePurpose { get; set; }
 
         /// <summary>
         /// The vehicle number
@@ -219,7 +219,7 @@ namespace BratnetProvider
         /// The VAT exemption category name
         /// </summary>
         [JsonProperty("vatExemptionCategoryName")]
-        public VATExemptionCategory? VATExemptionCategoryName { get; set; }
+        public string? VATExemptionCategoryName { get; set; }
 
         /// <summary>
         /// The digital or physical signature of the relevant parties, confirming the details of the transaction

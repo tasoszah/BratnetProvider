@@ -84,8 +84,7 @@ namespace BratnetProvider
         /// The measurement unit name
         /// </summary>
         [JsonProperty("measurementUnitName")]
-        [JsonConverter(typeof(MeasurementUnitToStringJsonConverter))]
-        public MeasurementUnit? MeasurementUnitName { get; set; }
+        public string? MeasurementUnitName { get; set; }
 
         /// <summary>
         /// The VAT percentage

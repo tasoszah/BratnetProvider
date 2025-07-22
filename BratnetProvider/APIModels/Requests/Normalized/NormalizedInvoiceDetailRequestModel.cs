@@ -115,7 +115,7 @@ namespace BratnetProvider
                 ItemDescription = ItemDescription,
                 LineNumber = LineNumber,
                 MeasurementUnit = MeasurementUnit,
-                MeasurementUnitName = MeasurementUnit,
+                MeasurementUnitName = MeasurementUnit is null ? null : Constants.MeasurementUnitToStringMapper[MeasurementUnit.Value],
                 Name = Name,
                 NetValue = NetValue,
                 NetValueBeforeDiscount = NetValueBeforeDiscount,

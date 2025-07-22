@@ -14,12 +14,14 @@ namespace BratnetProvider
         /// The category
         /// </summary>
         [JsonProperty("classificationCategory")]
+        [JsonConverter(typeof(IncomeClassificationCategoryToStringJsonConverter))]
         public IncomeClassificationCategory? Category { get; set; }
 
         /// <summary>
         /// The type
         /// </summary>
         [JsonProperty("classificationType")]
+        [JsonConverter(typeof(IncomeClassificationTypeToStringJsonConverter))]
         public IncomeClassificationType? Type { get; set; }
 
         /// <summary>
